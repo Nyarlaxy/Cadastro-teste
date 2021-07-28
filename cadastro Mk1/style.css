@@ -1,0 +1,291 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  display: grid;
+  background-color: snow;
+  color: black;
+  display: grid;
+  grid-template-columns: 50px 130px 250px 250px 250px 250px 10px;
+  cursor: default;
+}
+
+section, p, li, dt,dl,dd {
+  grid-column: 3/7;
+}
+
+/*Animação do menu */
+@keyframes show {
+  from {
+    opacity: 0;
+    transform:  translate3d(-20px,0,0);
+  } 
+  to {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+}
+
+
+.IconeMenu {
+  width: 50px;
+  columns: 2;
+  background-color: #52CFF5;
+  border-radius: 4px;
+  border-color: black;
+  
+}
+
+.lateral a {
+  opacity: 0.4;
+  font-family: Arial;
+  color: #52CFF5;
+  outline: none;
+  display: block;
+  padding: 20px 5px;
+  text-decoration: none;
+  
+}
+
+.lateral a:hover{
+  opacity: 1;
+  background: #52CFF5;
+  color: ghostwhite;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+ul {
+  list-style: none;
+  top: 50px;
+
+}
+
+.lateral{
+  opacity: 0.1;
+  background-color: teal;
+  width: 130px;
+  position:absolute;
+  height:auto;
+  left: 50px;
+  animation: show .3s forwards;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  
+  animation: show .5s forwards;
+  columns: 1/2;
+}
+
+.desativado {
+  display: none;
+}
+
+.ativo {
+  display: block;
+  animation: show 0.5s forwards;
+}
+.ativado {
+  animation: show 1s forwards;
+}
+/*===========================================================================================
+==============================================================================================*/
+
+.menuinicial {
+  grid-column: 3/9;
+  background-color: #52CFF5;
+  padding: 3px;
+  border-radius: 3px;
+  height: 50px;
+  width: 100%;
+}
+
+.menuinicial h1{
+  color:black;
+  position:center;
+  font-size: 40px;
+}
+
+.titulo {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  position: absolute;
+  height: 80px;
+  font-size: 6rem;
+  line-height: 1;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  grid-column: 1 / 4;
+  color: #52CFF5;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+}
+
+.primeiroP{
+  position: block !important;
+  color:black;
+  padding: 10px;
+  width: 100%;
+  margin-block-start: 100px;
+
+}
+
+section p {
+  position: block !important;
+  color: black;
+  padding: 10px;
+  width: 100%;
+}
+
+ol {
+  list-style-type: none;
+}
+
+
+.aliados {
+  grid-column: 3;
+  left: 0px;
+}
+.neutros {
+  grid-column: 4;
+  left: 250px;
+}
+.Inimigos {
+  grid-column: 5;
+  left: 500px;
+}
+.boss {
+  grid-column: 6;
+  left: 750px;
+
+}
+
+section #personagens li {
+  border: black;
+  color: midnightblue;
+}
+
+.tabela {
+  border-style:inherit;
+  opacity: 30;
+  border-radius: 4px;
+  background-color:teal;
+  opacity: 100;
+  padding: 5px;
+}
+
+.sobtabela {
+  padding: 10px;
+  background-color:#52CFF5;
+}
+
+.lista li {
+background: teal;
+}
+
+td {
+  border-top: 1px solid #ddd;
+  background-color: teal;
+}
+
+section a {
+  outline: none;
+  color: snow;
+  list-style:inside;
+  text-decoration: none;
+  padding: 5px;
+  font-size: 25px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  
+}
+a:hover {
+  background: teal;
+}
+
+.tabela p {
+  padding: 1px;
+}
+
+footer {
+  grid-column: 1/9;
+
+}
+
+footer div {
+  position: relative;
+  bottom: -69px;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 2rem;
+  background: #00A5AB;
+  color: black;
+}
+
+.listaAtivado {
+  display: block;
+  animation: show 0.3s forwards;
+}
+
+/*===========================================================================================
+==============================================================================================*/
+
+/*===========================================================================================
+====================================ESTILO DO MENU DE CRIAÇÃO=============================================*/
+
+.TituloCriacao {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  position: relative;
+  height: 40px;
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 400;
+  margin-bottom: 10px;
+  grid-column: 1 / 4;
+  color: #52CFF5;
+}
+#inserirT {
+  background-color:#52CFF5;
+  border-style: none;
+  font-size: 20px;
+}
+
+#inserirG {
+  background: black;
+  scale: 400;
+  margin: 10px 10px 0px 15px;
+}
+
+#inserirD {
+  background-color:#52CFF5;
+  border-style: none;
+  font-size: 20px;
+  height: 40px;
+  width: 100%;
+}
+#inserirN {
+  background-color:#52CFF5;
+  border-style: none;
+  font-size: 20px;
+  width: 80px;
+  position: relative;
+}
+
+.divisoria {
+  border-bottom: 4px;
+  border-color: black;
+  border-bottom-left-radius: 30px;
+}
+#kronorium label {
+  font-size: 30px;
+}
+
+.radiostyle {
+  size: 1000px;
+  border: tomato;
+  background-color: tomato;
+}

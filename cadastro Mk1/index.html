@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="">
+  <title>I-book</title>
+
+</head>
+<body>
+  
+</body>
+
+<body onload="Iniciarlista()">
+
+<img class="IconeMenu"src="img/IconeMenu.png" onclick="ativar()">   
+  <nav class="menu lateral desativado" data-atributes="menu">
+    <ul>
+      <li><a onclick="ativarAtalho(0)" href="#Llivros">Livros </a></li>
+      <li><a onclick="ativarAtalho(1)" href="#Lusuarios">Usuários</a></li>
+      <li><a onclick="ativarAtalho(2)" href="#Clivros">Cadastro de livros</a></li>
+      <li><a onclick="ativarAtalho(3)" href="#Cusuarios">Cadastro de Usuários</a></li>
+    </ul>
+  </nav>
+  <spam class="menuinicial" data-atributes="menu">
+  <h1>Booker</h1>
+  </spam>
+
+<section class="descricao desativado" id="#personagens">  
+  <h1 class="titulo"> livros</h1>
+    <p class="primeiroP">Aqui está a lista de personagens e seres dentro do RPG</p>
+    <p>personagen 1</p>
+    <div class="tabela">
+      <div class="sobtabela">
+  <ul>
+    <tr class="menuBottoes">
+    <th class="geral"> <a class="livros geral" href="#geral" onclick="ativarAtalhoMenu(0)">Livros Geral</a></th>
+    <th class="informatica"> <a class="livros informatica" href="#informatica" onclick="ativarAtalhoMenu(1)">Livros Informatica</a></th>
+    <th class="ação"> <a class="livros Ação" href="#Ação" onclick="ativarAtalhoMenu(2)">Livros de Ação</a></th>
+    <th class="Fantasia"> <a class="livros Fantasia" href="#fantasia" onclick="ativarAtalhoMenu(3)">Livros de Fantasia</a></th>
+    <th class="Infantil"> <a class="livros Infantil" href="#infantil" onclick="ativarAtalhoMenu(4)">Livros Infantil</a></th>
+  </tr>
+    <div class="tabela">
+      <ul class="ListaLivros geral">
+        <span class="fimLista"></span>
+      </ul>
+    </div>
+  </div>
+  </div>
+</section>
+<section class="descricao desativado" id="#cenario">
+<h1 class="titulo">Usuários</h1>
+<p class="primeiroP"> Aqui ficará a lista de cenários, suas caracteristicas, itens e musicas do cenário:</p>
+<div class="tabela">
+  <div class="sobtabela">
+<ul>
+
+<div class="tabela">
+  <ul class="">
+    <li class="Administrador"><p>Nome: Leonardo </p> <p>Cargo: Administrador</p></li>
+    <p></p>
+    <p></p>
+    <p></p>
+    <li class="Usuário"><p>Nome: Carlos </p> <p>Cargo: Usuário</p></li>
+    <p></p>
+    <p></p>
+   <p></p>
+    <li class="Usuário"><p>Nome: Lucas </p> <p>Cargo: Usuário</p></li>
+    <p></p>
+  <p></p>
+  <p></p>
+    <span class="fimListaUsuario"></span>
+  </ul>
+</div>
+</div>
+</div>
+
+</section>
+<section class="descricao ativado" id="#kronorium">
+  <h1 class="titulo">Cadastro de livros</h1>
+  <p class="primeiroP"> Aqui você pode cadastrar um livro novo ao site! Bem vindo!</p>
+  <div class="tabela">
+    <div class="sobtabela">
+  <ul>
+  <div class="tabela">
+      <div class="divisoria">
+      <li class="TituloCriacao">Titulo:</li>
+      <input type="text" name="Inserir" id="inserirT">
+    </div>
+      <li class="TituloCriacao">Gênero:</li>
+      <input type="radio" class="radiostyle" name="inserirG" id="Informatica" checked> 
+      <label for="informatica">Informatica</label> 
+      <input type="radio" class="radiostyle" name="inserirG" id="Acao" checked> 
+      <label for="acao">Ação</label> 
+      <input type="radio" class="radiostyle" name="inserirG" id="fantasia" checked> 
+      <label for="fantasia">Fantasia</label> 
+      <input type="radio" class="radiostyle" name="inserirG" id="infantil" checked> 
+      <label for="infantil">infantil</label> 
+      <li class="TituloCriacao">Descrição:</li>
+      <input type="text" id="inserirD">
+      <li class="TituloCriacao">Número de páginas:</li>
+      <input type="number" id="inserirN" min="0" max="99999" inputmode="numeric">
+      <input type="button" value="Adicionar" id="Bottão" onclick="Adicionar()">
+      <span class="fimLista"></span>
+    </ul>
+  </div>
+  </div>
+  </div>
+
+</section>
+<section class="descricao desativado" id="#novidades">
+  <h1 class="titulo">Cadastro de Usuários</h1>
+  <p class="primeiroP"> Cadastre um Novo usuário aqui</p>
+  <div class="tabela">
+    <div class="sobtabela">
+  <ul>
+  <div class="tabela">
+      <div class="divisoria">
+      <li class="TituloCriacao">Nome do Usuário</li>
+      <input type="text" name="NomeUsuário" id="InserirNome">
+    </div>
+      <li class="TituloCriacao">Cargo:</li>
+      <input type="radio" class="radiostyle" name="inserirCargo" id="adm" checked> 
+      <label for="informatica">Administrador</label> 
+      <input type="radio" class="radiostyle" name="inserirCargo" id="usuario" checked> 
+      <label for="usuario">Usuário</label> 
+      <li class="TituloCriacao">Senha:</li>
+      <input type="text" id="inserirSenha">
+      <input type="button" value="Adicionar" id="Bottão" onclick="AdicionarUsuario()">
+      <span class="fimLista"></span>
+    </ul>
+  </div>
+  </div>
+  </div>
+
+
+</section>
+
+<script src="script.js"></script> 
+<script src="meu script.js"> </script> 
+
+<footer>
+  <div id="horario">aqui ficará o horário</div>
+</footer>
+</body>
+
